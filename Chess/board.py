@@ -74,20 +74,6 @@ if __name__ == "__main__":
     clock = pygame.time.Clock()
     screen.blit(theBoard,(0,0))
 
-    for r in range(len(example.spaces)):
-        for c in range(len(example.spaces[0])):
-            print(r,' ',c)
-            try:
-                print(example.spaces[r][c].img)
-                print(example.spaces[r][c].name)
-
-            except:
-                print("none")
-            if(example.spaces[r][c]!= None):
-                screen.blit(pygame.image.load(example.spaces[r][c].img).convert(),(example.spaces[r][c].location[0]+10,example.spaces[r][c].location[1]+10))
-                pygame.display.flip()
-                #clock.tick(5)
-
 
 
     running = True
@@ -102,7 +88,7 @@ if __name__ == "__main__":
     clock = pygame.time.Clock()
     block = [int(height/8),int(width/8)]
     while running:
-
+        clock.tick(10)
         for event in pygame.event.get():
             if event.type ==pygame.QUIT:
                 running = False

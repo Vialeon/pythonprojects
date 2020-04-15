@@ -4,3 +4,4 @@ or bc pygame is not very efficient.
 Dependencies:
   Numpy
   PIL
+  pygame
